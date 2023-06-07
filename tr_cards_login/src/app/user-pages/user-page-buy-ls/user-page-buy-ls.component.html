@@ -1,0 +1,28 @@
+<app-user-scrollbar></app-user-scrollbar>
+
+  <main>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Type</th>
+                    <th>Position</th>
+                    <th>Overall</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody class="items" *ngFor="let listing of listings">
+                <tr>
+                    <td>{{listing.card?.type}}</td>
+                    <td>{{listing.card?.position}}</td>
+                    <td>{{listing.card?.overall}}</td>
+                    <td>{{listing.price}}</td>
+                    <td>
+                        <button (click)="buyListing(listing.id)">Buy</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</main>

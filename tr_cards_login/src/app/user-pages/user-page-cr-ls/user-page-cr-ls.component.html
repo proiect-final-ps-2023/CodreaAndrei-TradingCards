@@ -1,0 +1,36 @@
+<app-user-scrollbar></app-user-scrollbar>
+
+<main>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Position</th>
+                    <th>Overall</th>
+                    <th>minPrice</th>
+                    <th>maxPrice</th>
+                    <th>Selling Price</th>
+                    <th>Sell</th>
+                </tr>
+            </thead>
+            <tbody class="items" *ngFor="let card of ownedCards">
+                <tr>
+                    <td>{{card.player?.name}}</td>
+                    <td>{{card.type}}</td>
+                    <td>{{card.position}}</td>
+                    <td>{{card.overall}}</td>
+                    <td>{{card.minPrice}}</td>
+                    <td>{{card.maxPrice}}</td>
+                    <td>
+                        <input input type="text" id = "price" name="price">
+                    </td>
+                    <td>
+                        <button (click)="createListing(card.id)">Sell</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</main>

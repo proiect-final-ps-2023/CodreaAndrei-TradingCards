@@ -1,0 +1,29 @@
+<div class="login">
+    <!--<div [style]="'display: flex'">
+        <mat-list>
+            <div mat-subheader>List of users</div>
+            <mat-list-item *ngFor = "let user of userList">
+                <div mat-line>{{user.id}}</div>
+                <div mat-line>{{user.username}}</div>
+            </mat-list-item>
+        </mat-list>-->
+    <div class="login-body">
+        <img class="login-imgs" src="../../assets/img/messi-login.png">
+        <img class="login-imgs" src="../../assets/img/ronaldo-login.png"> 
+        <div class="login-form">
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id = "username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id = "password" name="password">
+            </form>
+        </div>
+        
+    
+        <div class=buttons>  
+               <app-open-close class="app-open-close"></app-open-close>
+               <button class="register" (click)="(navigateRegister())">Register</button>
+       <div>
+    </div>   
+</div>
+

@@ -1,0 +1,30 @@
+<app-admin-scrollbar></app-admin-scrollbar>
+
+<main>
+  <h1>Admin page</h1><br>
+  
+  <div class="box">
+    
+      <table class="table-container">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody class="items" *ngFor="let user of users">
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.logged}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class>
+      <input type="text" name="txt" [(ngModel)]="message" (change)="sendToServer($event)">
+    </div>
+
+  </div>
+
+</main>
+

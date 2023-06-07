@@ -1,0 +1,162 @@
+.main {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+}
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card-container hr {
+	flex-basis: 100%; 
+	height: 0; 
+	margin: 0; 
+	border: 0;
+}
+
+
+.card {
+	position: relative;
+	width: 260px;
+	height: 390px;
+	text-transform: uppercase;
+}
+
+.card-color {
+	color: #46390c;
+	background-repeat: no-repeat;
+	background-size: 285px 394px;
+	background-position: center;
+}
+
+.face {
+	position: absolute;
+	overflow: hidden;
+	right: 22px;
+	top: 47px;
+	width: 155px;
+	height: 155px;
+}
+
+.face-inner {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.face-inner img {
+	height: 155px;
+}
+
+.badge {
+	position: absolute;
+	top: 157px;
+	left: 47px;
+	z-index: 11;
+}
+
+.badge img {
+	width: 38px;
+}
+
+.flag {
+	position: absolute;
+	top: 120px;
+	left: 50px;
+	z-index: 11;
+}
+
+.flag img {
+	width: 36px;
+}
+
+.card-name {
+	font-family: dinProBold;
+	font-size: 28px;
+    position: absolute;
+    top: 215px;
+    left: 20px;
+    width: 218px;
+	height: 42px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    z-index: 11;
+}
+
+.card-rating {
+	font-family: dinProBold;
+	font-size: 40px;
+    position: absolute;
+    top: 70px;
+    left: 45px;
+    width: 50px;
+    text-align: center;
+    z-index: 11;
+}
+
+.card-position {
+	font-family: dinProRegular;
+	font-size: 22px;
+    position: absolute;
+    top: 95px;
+    left: 45px;
+    width: 50px;
+    text-align: center;
+    z-index: 11;
+}
+
+.card-atts {
+	font-family: dinProBold;
+    position: absolute;
+    top: 238px;
+    left: 56px;
+    z-index: 11;
+}
+
+.card-attnum {
+	font-size: 24px;
+}
+
+.card-attlabel {
+	font-family: dinProRegular;
+	font-size: 24px;
+	top: 1px;
+}
+
+.card-atts1 {
+	position: absolute;
+    top: 1px;
+}
+
+.card-atts2 {
+	position: absolute;
+	top: 25px;
+}
+
+.card-atts3 {
+	position: absolute;
+	top: 50px;
+}
+
+.card-attnum1, .card-attnum2, .card-attnum3 {
+	position: absolute;
+}
+
+.card-attlabel1, .card-attlabel2, .card-attlabel3 {
+	position: absolute;
+	left: 22px;
+}
+
+.card-attnum4, .card-attnum5, .card-attnum6 {
+	position: absolute;
+	left: 102px;
+}
+
+.card-attlabel4, .card-attlabel5, .card-attlabel6 {
+	position: absolute;
+	left: 125px;
+}

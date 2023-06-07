@@ -1,0 +1,97 @@
+<app-user-scrollbar></app-user-scrollbar>
+
+<main>
+    <!--<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Buy</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody class="items" *ngFor="let pack of packs">
+                <tr>
+                    <td>
+                        <button (click)="buyPack(pack.id)">Buy</button>
+                    </td>
+                    <td>{{pack.name}}</td>
+                    <td>{{pack.description}}</td>
+                    <td>{{pack.price}}</td>
+                    <td>{{pack.size}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    -->
+    <h1 class="header">Choose a pack to open</h1>
+    <div class="pack-container" >
+        <div class ="box">
+            <div>
+                <img class="pack-image" src="../../../assets/packs/gold-pack.png" (click)="buyPack(gold_id)">
+            </div>
+            <div>
+                <img class="pack-image" src="../../../assets/packs/silver-pack.png" (click)="buyPack(silver_id)">
+            </div>
+            <div>
+                <img class="pack-image" src="../../../assets/packs/bronze-pack.png" (click)="buyPack(bronze_id)">
+            </div>
+        </div>
+    </div>
+    
+    <div class = "card-container">
+        <div class="player-card"  *ngFor="let cardInfo of cardsInfo; let i = index">
+            <div style="filter:drop-shadow(0 px 0px 10px rgba(255, 255, 255, 0.3)); width: 260px; margin-left: auto;
+            margin-right: auto;">
+                <div class="card card-color" [ngStyle]="applyCardStyles(i)">
+                    <div class="face">
+                        <div class="face-inner">
+                            <img src= {{cardInfo.facePath}}>
+                        </div>
+                    </div>
+                    <div class="badge">
+                        <img src = {{cardInfo.badgePath}}>
+                    </div>
+                    <div class="flag">
+                        <img src = {{cardInfo.flagPath}}>
+                    </div>
+                    <div class="card-name">{{cardInfo.card?.player?.name}}</div>
+                    <div class="card-rating">{{cardInfo.card?.overall}}</div>
+                    <div class="card-position">{{cardInfo.card?.position}}</div>
+                    <div class="card-atts">
+                        <div class="card-atts1">
+                            <div class="card-attnum card-attnum1">{{cardInfo.card?.pace}}</div>
+                            <div class="card-attlabel card-attlabel1">PAC</div>
+                            <div class="card-attnum card-attnum4">{{cardInfo.card?.dribbling}}</div>
+                            <div class="card-attlabel card-attlabel4">DRI</div>
+                        </div>
+                        <div class="card-atts2">
+                            <div class="card-attnum card-attnum2">{{cardInfo.card?.shooting}}</div>
+                            <div class="card-attlabel card-attlabel2">SHO</div>
+                            <div class="card-attnum card-attnum5">{{cardInfo.card?.defending}}</div>
+                            <div class="card-attlabel card-attlabel5">DEF</div>
+                        </div>
+                        <div class="card-atts3">
+                            <div class="card-attnum card-attnum3">{{cardInfo.card?.passing}}</div>
+                            <div class="card-attlabel card-attlabel3">PAS</div>
+                            <div class="card-attnum card-attnum6">{{cardInfo.card?.physical}}</div>
+                            <div class="card-attlabel card-attlabel6">PHY</div>
+                        </div>
+                    </div>
+                    <div class="card-headeroverlay"></div>
+                    <div class="card-split card-flag-split"></div>
+                    <div class="card-split card-name-split"></div>
+                    <div class="card-split card-atts-split"></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="button-prev" style="width: 50%; display: flex; justify-content: center;">
+            <button mat-raised-button (click)="prevPage()">Previous page</button>
+        </div>
+    </div>
+  
+
+</main>
